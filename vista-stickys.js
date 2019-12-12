@@ -40,11 +40,13 @@ function mostrarTablon() {
 function mostrarNotas(){
     var temporizador=1;
     let div=document.getElementById("plano");
+    /*let parse=localStorage.getItem("notas");
+    notas=JSON.parse(parse);*/
     setInterval(() => {
         
         for (const nota of notas) {
             if(nota!=null){
-                div.appendChild(nota.not);
+                //div.appendChild(nota.not);
             if(nota.transcurrido.textContent=="-"){
                 nota.transcurrido.textContent=temporizador+" minuto";
             }else{
