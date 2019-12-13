@@ -2,6 +2,7 @@ import {Nota} from './sticky.js';
 var cont=0;
 var notas=[];
 
+
 window.onload = () => {
     mostrarTablon();
 }
@@ -11,6 +12,8 @@ function mostrarTablon() {
     document.body.style.backgroundImage="url('https://www.publicdomainpictures.net/pictures/30000/velka/cork-board.jpg')";
     div.style.display="flex";
     mostrarNotas();
+
+    document.body.addEventListener("mousemove", move);
 
     let div2=document.createElement("div");
     
@@ -40,10 +43,8 @@ function mostrarTablon() {
 function mostrarNotas(){
     var temporizador=1;
     let div=document.getElementById("plano");
-    /*let parse=localStorage.getItem("notas");
-    notas=JSON.parse(parse);*/
     setInterval(() => {
-        
+        if(notas!=null)
         for (const nota of notas) {
             if(nota!=null){
                 //div.appendChild(nota.not);
@@ -58,11 +59,13 @@ function mostrarNotas(){
     }, 60000);
     
     console.log(notas);
+    if(notas!=null)
     for (const nota of notas) {   
         if(nota!=null){
 
             nota.boton.addEventListener("click", actualizar);
             nota.botoneliminar.addEventListener("click", eliminar);
+            nota.not.addEventListener("click", clickNota)
             div.appendChild(nota.not);
 
         }
@@ -72,6 +75,7 @@ function mostrarNotas(){
     /*let parse=localStorage.getItem("notas");
     notas=JSON.parse(parse);*/
 }
+
 
 function crearNota() {
     let input=document.getElementById("input");

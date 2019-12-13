@@ -1,4 +1,4 @@
-var cont;
+var cont=0;
 
 export class Nota{
     constructor(title){
@@ -38,6 +38,8 @@ export class Nota{
         this.transcurrido= document.createElement("p");
         this.transcurrido.textContent="-";
         this.transcurrido.style.cssFloat="right";
+
+        
 
         this.not.setAttribute("id", "nota"+cont);
         
