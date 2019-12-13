@@ -13,8 +13,7 @@ function mostrarTablon() {
     div.style.display="flex";
     mostrarNotas();
 
-    document.body.addEventListener("mousemove", move);
-
+    
     let div2=document.createElement("div");
     
     
@@ -65,7 +64,6 @@ function mostrarNotas(){
 
             nota.boton.addEventListener("click", actualizar);
             nota.botoneliminar.addEventListener("click", eliminar);
-            nota.not.addEventListener("click", clickNota)
             div.appendChild(nota.not);
 
         }
