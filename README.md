@@ -1,3 +1,5 @@
-# Sticky-Notes
+# 2º DAW - Client Web Development
 
-https://altope.000webhostapp.com/sticky/
+# JavaScript notes management system 
+
+# PRODUCTION: https://altope.000webhostapp.com/sticky/index.html
